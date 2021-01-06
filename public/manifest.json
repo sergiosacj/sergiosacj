@@ -1,0 +1,17 @@
+{
+  "short_name": "sergiosacj",
+  "name": "sergiosacj portfolio",
+  "description": "portfolio of Sergio de Almeida Cipriano Junior",
+  "icons": [
+    {
+      "src": "/public/me.jpeg",
+      "type": "public/jpeg",
+      "sizes": "582x582"
+    }
+  ],
+  "start_url": "/?source=pwa",
+  "background_color": "#666666",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#666666"
+}
