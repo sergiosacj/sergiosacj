@@ -7,12 +7,7 @@ const Navbar: React.FunctionComponent = () => {
     <div className="navbar">
       <div className="container">
         <div className="logo">
-          <img
-            src={logo}
-            alt="logo"
-            width="100%"
-            height="20px"
-          />
+          <img src={logo} alt="logo" />
         </div>
         <ul className={`menu`}>
           <li>home</li>
