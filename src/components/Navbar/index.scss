@@ -49,8 +49,12 @@ $navbar-background: white;
         }
       }
     }
-  }
-}
 
-@media only screen and (max-width: 900px) {
+    .fabar-btn {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 40px;
+    }
+  }
 }
