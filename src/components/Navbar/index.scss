@@ -26,6 +26,7 @@ $navbar-background: white;
     max-width: 1200px;
 
     .logo {
+      flex: 1;
       display: flex;
       justify-content: flex-start;
       width: 100%;
@@ -33,6 +34,7 @@ $navbar-background: white;
     }
 
     .menu {
+      flex: 1;
       @extend %format-text;
       width: 100%;
       display: flex;
@@ -41,11 +43,11 @@ $navbar-background: white;
       li {
         flex: 1;
         text-align: center;
-        transition: color 1.2s;
+        transition: color 1s;
+        cursor: pointer;
 
         &:hover {
           color: $secondary-color;
-          cursor: pointer;
         }
       }
     }
@@ -54,7 +56,14 @@ $navbar-background: white;
       width: 100%;
       display: flex;
       justify-content: flex-end;
-      margin-right: 40px;
+      margin-right: 3em;
+      cursor: pointer;
+      transition: all 0.3s linear;
+
+      &:hover {
+        color: $secondary-color;
+        transform: rotate(90deg);
+      }
     }
   }
 }

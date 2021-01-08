@@ -1,6 +1,6 @@
 import * as React from "react";
 import "./index.scss";
-import logo from "./assets/logo.svg";
+import logo from "./assets/logo2.svg";
 import { FaBars } from "react-icons/fa";
 
 const Navbar: React.FunctionComponent = () => {
@@ -18,6 +18,8 @@ const Navbar: React.FunctionComponent = () => {
       window.removeEventListener("resize", checkWindowSize);
   }, []);
 
+  React.useEffect(() => checkWindowSize(), []);
+
   return (
     <div className="navbar">
       <div className="container">
@@ -33,8 +35,8 @@ const Navbar: React.FunctionComponent = () => {
             <li>contact</li>
           </ul>
         ) : (
-          <div className="fabar-btn">
-            <FaBars />
+          <div>
+            <FaBars className="fabar-btn" />
           </div>
         )}
       </div>
