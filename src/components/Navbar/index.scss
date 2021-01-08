@@ -1,23 +1,25 @@
 @import "../../partials/variables";
 
-$links-color: rgb(50, 50, 50);
-$navbar-background: white;
-
 %format-text {
   color: $links-color;
   text-decoration: none;
   text-transform: capitalize;
   font-weight: bold;
   font-size: large;
+  list-style-type: none;
+}
+
+%shadow {
+  box-shadow: 0px 8px 8px $secondary-color-light;
 }
 
 .navbar {
+  @extend %shadow;
   background: $navbar-background;
   min-height: 60px;
   display: flex;
   justify-content: center;
   place-items: center;
-  box-shadow: 0px 0px 10px 1px $secondary-color;
 
   .container {
     display: flex;
@@ -25,16 +27,13 @@ $navbar-background: white;
 
     .logo {
       flex: 1;
-      display: flex;
-      justify-content: flex-start;
       height: 1.2em;
     }
 
     .menu {
-      flex: 1;
       @extend %format-text;
+      flex: 1;
       display: flex;
-      list-style-type: none;
 
       li {
         flex: 1;
@@ -60,6 +59,36 @@ $navbar-background: white;
         color: $secondary-color;
         transform: rotate(90deg);
       }
+    }
+
+    .rotate {
+      color: $secondary-color;
+      transform: rotate(90deg);
+    }
+  }
+}
+
+.responsive-menu {
+  @extend %format-text;
+  @extend %shadow;
+  height: 0;
+  overflow: hidden;
+  transition: all 1s;
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  background-color: $navbar-background;
+
+  li {
+    height: 40px;
+    padding-top: 10px;
+    padding-left: 20px;
+    place-items: center;
+    transition: all 1s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $secondary-color-light;
+      padding-left: 25px;
     }
   }
 }

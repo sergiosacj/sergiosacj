@@ -1,15 +1,24 @@
 import * as React from "react";
 import "./index.scss";
+import { menu } from "./menu";
 import logo from "./assets/logo2.svg";
 import { FaBars } from "react-icons/fa";
 
 const Navbar: React.FunctionComponent = () => {
-  const [showSidebar, setShowSidebar] = React.useState(false);
+  const [showFaBar, setShowFaBar] = React.useState<Boolean>(
+    false
+  );
+  const [showMenu, setShowMenu] = React.useState<Boolean>(false);
+  const linksContainerRef = React.useRef<HTMLDivElement>(null);
+  const linksRef = React.useRef<HTMLUListElement>(null);
 
   const checkWindowSize = () => {
-    window.innerWidth < 900
-      ? setShowSidebar(true)
-      : setShowSidebar(false);
+    if (window.innerWidth < 900) {
+      setShowFaBar(true);
+    } else {
+      setShowFaBar(false);
+      setShowMenu(false);
+    }
   };
 
   React.useEffect(() => {
@@ -20,25 +29,42 @@ const Navbar: React.FunctionComponent = () => {
 
   React.useEffect(() => checkWindowSize(), []);
 
+  React.useEffect(() => {
+    const linksHeight = showMenu
+      ? `${linksRef!.current!.getBoundingClientRect().height}px`
+      : "0px";
+    linksContainerRef!.current!.style.height = linksHeight;
+  }, [showMenu]);
+
   return (
-    <div className="navbar">
-      <div className="container">
-        <div className="logo">
-          <img src={logo} alt="logo" />
+    <>
+      <div className="navbar">
+        <div className="container">
+          <img src={logo} alt="logo" className="logo" />
+          {!showFaBar ? (
+            <ul className="menu">
+              {menu.map((links, index) => {
+                return <li key={index}>{links}</li>;
+              })}
+            </ul>
+          ) : (
+            <FaBars
+              className={`fabar-btn ${showMenu && "rotate"}`}
+              onClick={() => {
+                setShowMenu(!showMenu);
+              }}
+            />
+          )}
         </div>
-        {!showSidebar ? (
-          <ul className="menu">
-            <li>home</li>
-            <li>about</li>
-            <li>project</li>
-            <li>blog</li>
-            <li>contact</li>
-          </ul>
-        ) : (
-          <FaBars className="fabar-btn" />
-        )}
       </div>
-    </div>
+      <div className="responsive-menu" ref={linksContainerRef}>
+        <ul ref={linksRef}>
+          {menu.map((links, index) => {
+            return <li key={index}>{links}</li>;
+          })}
+        </ul>
+      </div>
+    </>
   );
 };
 
