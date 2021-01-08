@@ -35,9 +35,7 @@ const Navbar: React.FunctionComponent = () => {
             <li>contact</li>
           </ul>
         ) : (
-          <div>
-            <FaBars className="fabar-btn" />
-          </div>
+          <FaBars className="fabar-btn" />
         )}
       </div>
     </div>
