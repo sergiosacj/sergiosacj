@@ -1,16 +1,17 @@
 import * as React from "react";
+import { Link } from "react-router-dom";
 import "./index.scss";
-import { menu } from "./menu";
+import { menu } from "./_menu";
 import logo from "./assets/logo2.svg";
 import { FaBars } from "react-icons/fa";
 
-const Navbar: React.FunctionComponent = () => {
+const Navbar: React.FC = () => {
   const [showFaBar, setShowFaBar] = React.useState<Boolean>(
     false
   );
   const [showMenu, setShowMenu] = React.useState<Boolean>(false);
   const linksContainerRef = React.useRef<HTMLDivElement>(null);
-  const linksRef = React.useRef<HTMLUListElement>(null);
+  const linksRef = React.useRef<HTMLDivElement>(null);
 
   const checkWindowSize = () => {
     if (window.innerWidth < 900) {
@@ -19,6 +20,17 @@ const Navbar: React.FunctionComponent = () => {
       setShowFaBar(false);
       setShowMenu(false);
     }
+  };
+
+  const mapMenu = (classname: string) => {
+    const items = menu.map((links, index) => {
+      return (
+        <Link key={index} to={`/${links}`} className={classname}>
+          {links}
+        </Link>
+      );
+    });
+    return items;
   };
 
   React.useEffect(() => {
@@ -42,11 +54,7 @@ const Navbar: React.FunctionComponent = () => {
         <nav>
           <img src={logo} alt="logo" className="logo" />
           {!showFaBar ? (
-            <ul className="menu">
-              {menu.map((links, index) => {
-                return <li key={index}>{links}</li>;
-              })}
-            </ul>
+            <ul className="menu" children={mapMenu("link")} />
           ) : (
             <FaBars
               className={`fabar-btn ${showMenu && "rotate"}`}
@@ -58,11 +66,11 @@ const Navbar: React.FunctionComponent = () => {
         </nav>
       </div>
       <div className="responsive-menu" ref={linksContainerRef}>
-        <ul ref={linksRef}>
-          {menu.map((links, index) => {
-            return <li key={index}>{links}</li>;
-          })}
-        </ul>
+        <div
+          ref={linksRef}
+          className="container"
+          children={mapMenu("responsive-link")}
+        />
       </div>
     </>
   );
