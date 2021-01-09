@@ -1,7 +1,7 @@
 export const menu = [
   "home",
   "about",
-  "project",
+  "projects",
   "blog",
   "contact",
 ];
