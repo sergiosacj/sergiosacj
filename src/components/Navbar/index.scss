@@ -15,25 +15,27 @@
 }
 
 .navbar {
-  @extend %shadow;
+  // @extend %shadow;
   background: $navbar-background;
   min-height: 60px;
-  display: flex;
-  justify-content: center;
-  place-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: $site-width;
+  margin: auto;
 
   nav {
-    display: flex;
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 
     .logo {
-      flex: 1;
       height: 1.2em;
+      margin: auto;
+      margin-left: 1em;
     }
 
     .menu {
+      margin-right: 1em;
       @extend %format-text;
-      flex: 1;
       display: flex;
 
       .link {
@@ -58,9 +60,7 @@
     }
 
     .fabar-btn {
-      flex: 0.1;
-      display: flex;
-      justify-content: flex-end;
+      margin: auto;
       margin-right: 1em;
       cursor: pointer;
       transition: all 0.3s linear;
