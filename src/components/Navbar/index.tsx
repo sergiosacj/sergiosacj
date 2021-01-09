@@ -39,7 +39,7 @@ const Navbar: React.FunctionComponent = () => {
   return (
     <>
       <div className="navbar">
-        <div className="container">
+        <nav>
           <img src={logo} alt="logo" className="logo" />
           {!showFaBar ? (
             <ul className="menu">
@@ -55,7 +55,7 @@ const Navbar: React.FunctionComponent = () => {
               }}
             />
           )}
-        </div>
+        </nav>
       </div>
       <div className="responsive-menu" ref={linksContainerRef}>
         <ul ref={linksRef}>
