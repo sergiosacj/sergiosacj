@@ -1,8 +1,8 @@
 import * as React from "react";
-import Home from "./components/Home";
+import Navbar from "./components/Navbar";
 
 const App: React.FunctionComponent = () => {
-  return <Home />;
+  return <Navbar />;
 };
 
 export default App;
