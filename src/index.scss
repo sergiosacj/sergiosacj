@@ -1,15 +1,10 @@
 @import "./partials/variables";
 
-*,
-::after,
-::before {
+body {
   width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-body {
   font-family: $ff-primary;
   background-color: $primary-color;
 }
