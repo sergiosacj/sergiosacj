@@ -62,3 +62,17 @@ $button-letter-color: #513c06;
     }
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .hero {
+    .hero-center {
+      margin-top: 10em;
+      .hero-info {
+        margin-left: 1.4em;
+      }
+      .hero-img {
+        flex: 0;
+      }
+    }
+  }
+}
