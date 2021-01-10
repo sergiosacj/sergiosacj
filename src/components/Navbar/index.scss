@@ -15,7 +15,6 @@
 }
 
 .navbar {
-  // @extend %shadow;
   background: $navbar-background;
   min-height: 60px;
   display: grid;
@@ -80,7 +79,6 @@
 
 .responsive-menu {
   @extend %format-text;
-  @extend %shadow;
   height: 0;
   overflow: hidden;
   transition: all 1s;
@@ -94,11 +92,11 @@
     .responsive-link {
       @extend %format-text;
       height: 40px;
-      padding-top: 10px;
+      padding-top: 20px;
       padding-left: 20px;
-      place-items: center;
       transition: all 1s;
       cursor: pointer;
+      margin-top: auto;
 
       &:hover {
         background-color: $secondary-color-light;
@@ -112,6 +110,23 @@
       &:active {
         text-decoration: none;
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  %nav-shadow {
+    box-shadow: 0px 8px 8px $secondary-color-light;
+  }
+
+  .navbar {
+    @extend %nav-shadow;
+    background-color: white;
+  }
+  .responsive-menu {
+    @extend %nav-shadow;
+    .container {
+      background-color: white;
     }
   }
 }
