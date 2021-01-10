@@ -25,7 +25,12 @@ const Navbar: React.FC = () => {
   const mapMenu = (classname: string) => {
     const items = menu.map((links, index) => {
       return (
-        <Link key={index} to={`/${links}`} className={classname}>
+        <Link
+          key={index}
+          to={`/${links}`}
+          className={classname}
+          onClick={() => setShowMenu(false)}
+        >
           {links}
         </Link>
       );
