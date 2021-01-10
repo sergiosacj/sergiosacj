@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./index.scss";
+import { Link } from "react-router-dom";
 
 interface IHeroProps {}
 
@@ -14,7 +15,11 @@ const Hero: React.FunctionComponent<IHeroProps> = (props) => {
             Software Engineer & Free and Open Software
             Contributor
           </h4>
-          <button className="contact-me">contact me</button>
+          <button className="contact-me">
+            <Link to="/contact" className="link">
+              contact me
+            </Link>
+          </button>
         </article>
         <article className="hero-img"></article>
       </div>

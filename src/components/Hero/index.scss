@@ -47,9 +47,13 @@ $button-letter-color: #513c06;
         letter-spacing: 2px;
         text-transform: uppercase;
         background-color: $secondary-color;
-        color: $button-letter-color;
         transition: all 0.3s linear;
         cursor: pointer;
+
+        .link {
+          color: $button-letter-color;
+          text-decoration: none;
+        }
 
         &:hover {
           background-color: $secondary-color-light;
