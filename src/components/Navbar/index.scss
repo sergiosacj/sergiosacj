@@ -7,7 +7,6 @@
   font-weight: bold;
   font-size: large;
   list-style-type: none;
-  text-decoration: "none";
 }
 
 %shadow {
@@ -34,7 +33,6 @@
 
     .menu {
       margin-right: 1em;
-      @extend %format-text;
       display: flex;
 
       .link {
@@ -46,14 +44,6 @@
 
         &:hover {
           color: $secondary-color;
-        }
-
-        &:focus,
-        &:hover,
-        &:visited,
-        &:link,
-        &:active {
-          text-decoration: none;
         }
       }
     }
@@ -87,7 +77,6 @@
     display: grid;
     grid-template-rows: repeat(5, 1fr);
     background-color: $navbar-background;
-    text-decoration: "none";
 
     .responsive-link {
       @extend %format-text;
@@ -101,14 +90,6 @@
       &:hover {
         background-color: $secondary-color-light;
         padding-left: 25px;
-      }
-
-      &:focus,
-      &:hover,
-      &:visited,
-      &:link,
-      &:active {
-        text-decoration: none;
       }
     }
   }
