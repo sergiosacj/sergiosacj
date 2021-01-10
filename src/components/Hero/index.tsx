@@ -1,10 +1,9 @@
 import * as React from "react";
 import "./index.scss";
 import { Link } from "react-router-dom";
+import me from "./assets/sergiosacj.jpg";
 
-interface IHeroProps {}
-
-const Hero: React.FunctionComponent<IHeroProps> = (props) => {
+const Hero: React.FunctionComponent = () => {
   return (
     <div className="hero">
       <div className="hero-center">
@@ -21,7 +20,9 @@ const Hero: React.FunctionComponent<IHeroProps> = (props) => {
             </Link>
           </button>
         </article>
-        <article className="hero-img"></article>
+        <article className="hero-img">
+          <img src={me} alt="myself" className="hero-photo" />
+        </article>
       </div>
     </div>
   );
