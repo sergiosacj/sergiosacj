@@ -104,6 +104,7 @@
   .navbar {
     @extend %nav-shadow;
     background-color: white;
+    margin-top: 0;
   }
   .responsive-menu {
     @extend %nav-shadow;
