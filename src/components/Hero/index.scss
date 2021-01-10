@@ -89,12 +89,10 @@ $hero-top-margin: 12em;
 
 @media only screen and (max-width: 900px) {
   .hero {
+    height: 40vh;
     .hero-center {
+      margin: auto;
       margin-top: 5em;
-      .hero-info {
-        margin-top: 0;
-        margin-left: 1.4em;
-      }
       .hero-img::before {
         display: none;
       }
