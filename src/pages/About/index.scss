@@ -62,3 +62,13 @@ $width-max-size: 1000px;
     }
   }
 }
+
+@media only screen and (max-width: 900px) {
+  .container {
+    .about-me {
+      .description {
+        font-size: 1em;
+      }
+    }
+  }
+}
