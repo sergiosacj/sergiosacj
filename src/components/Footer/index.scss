@@ -1,0 +1,39 @@
+@import "../../partials/variables";
+
+@mixin footer-format-text($color) {
+  @extend %format-text;
+  color: $color;
+}
+
+$text-color: #617d98;
+
+.footer {
+  height: 10em;
+  background-color: $footer-background;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .icons {
+    @include footer-format-text($secondary-color);
+    flex: 1.5;
+    padding: 0;
+    width: 10%;
+    margin: auto;
+    margin-top: 2em;
+    padding-left: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+
+    .social-icons {
+      flex: 1;
+    }
+  }
+
+  h4 {
+    @include footer-format-text($text-color);
+    flex: 1;
+    margin: auto;
+  }
+}

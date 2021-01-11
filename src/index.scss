@@ -8,3 +8,13 @@ body {
   font-family: $ff-primary;
   background-color: $primary-color;
 }
+
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+
+  .site-content {
+    flex: 1;
+  }
+}
