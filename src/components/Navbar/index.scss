@@ -1,12 +1,11 @@
 @import "../../partials/variables";
 
 %format-text {
-  color: $links-color;
+  color: $navbar-links-color;
   text-decoration: none;
   text-transform: capitalize;
   font-weight: bold;
   font-size: large;
-  list-style-type: none;
 }
 
 %shadow {

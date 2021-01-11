@@ -11,7 +11,7 @@ $ff-primary: "Roboto", sans-serif;
 $ff-secondary: "Open Sans", sans-serif;
 
 $navbar-background: $primary-color;
-$links-color: rgb(50, 50, 50);
+$navbar-links-color: rgb(50, 50, 50);
 
 @mixin underline($width, $height, $background, $position) {
   width: $width;
