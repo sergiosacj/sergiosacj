@@ -4,7 +4,7 @@
 $description-color: #617d98;
 $button-background-color: #dae2ec;
 $button-text-color: #617d98;
-$width-max-size: 1000px;
+$width-max-size: 700px;
 
 .container {
   width: 100%;
@@ -33,7 +33,7 @@ $width-max-size: 1000px;
     }
     .description {
       flex: 1;
-      font-size: 1.5em;
+      font-size: 1em;
       font-family: $ff-secondary;
       text-align: justify;
       color: $description-color;
@@ -59,6 +59,7 @@ $width-max-size: 1000px;
         text-transform: uppercase;
         padding: 0.25rem 0.5rem;
         border-radius: 10%;
+        font-size: 0.7em;
       }
     }
   }
@@ -67,6 +68,9 @@ $width-max-size: 1000px;
 @media only screen and (max-width: 900px) {
   .container {
     .about-me {
+      h1 {
+        font-size: 2.5em;
+      }
       .description {
         font-size: 1em;
       }

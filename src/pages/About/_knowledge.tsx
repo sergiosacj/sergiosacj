@@ -1,6 +1,7 @@
 export const knowledges = [
   "html",
   "css",
+  "scss",
   "javascript",
   "typescript",
   "python",
