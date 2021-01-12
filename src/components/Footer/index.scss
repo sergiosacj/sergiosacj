@@ -8,26 +8,32 @@
 $text-color: #617d98;
 
 .footer {
-  height: 10em;
+  height: 7em;
   background-color: $footer-background;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: column;
+  flex-wrap: wrap;
 
   .icons {
     @include footer-format-text($secondary-color);
     flex: 1.5;
+    max-width: 100px;
+    max-height: 30px;
     padding: 0;
-    width: 10%;
     margin: auto;
-    margin-top: 2em;
-    padding-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
 
     .social-icons {
-      flex: 1;
+      flex: 0.01;
+      margin: 0;
+      padding: 2px;
+
+      a {
+        color: $secondary-color;
+      }
     }
   }
 
@@ -35,5 +41,14 @@ $text-color: #617d98;
     @include footer-format-text($text-color);
     flex: 1;
     margin: auto;
+    text-align: justify;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footer {
+    h4 {
+      font-size: 60%;
+    }
   }
 }

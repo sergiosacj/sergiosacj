@@ -3,7 +3,7 @@ import "./index.scss";
 import { Link } from "react-router-dom";
 import me from "./assets/sergiosacj.jpg";
 
-const Hero: React.FunctionComponent = () => {
+const Hero: React.FC = () => {
   return (
     <div className="hero">
       <div className="hero-center">

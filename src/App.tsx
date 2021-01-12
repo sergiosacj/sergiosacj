@@ -3,7 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import Route from "./routes";
 import { Navbar, Footer } from "./components";
 
-const App: React.FunctionComponent = () => {
+const App: React.FC = () => {
   return (
     <div className="site">
       <div className="site-content">

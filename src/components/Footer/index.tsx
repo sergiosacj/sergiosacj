@@ -2,7 +2,7 @@ import * as React from "react";
 import "./index.scss";
 import { icons } from "./_icons";
 
-const Footer: React.FunctionComponent = () => {
+const Footer: React.FC = () => {
   return (
     <div className="footer">
       <ul className="icons">
