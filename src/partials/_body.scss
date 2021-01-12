@@ -1,19 +1,11 @@
 $site-width: 1200px;
 
-$titles-font-size: 4em;
-$titles-margin-top: 3em;
-
 $primary-color: #fffaeb;
 $secondary-color: #e9b949;
 $secondary-color-light: #f2d592;
 
 $ff-primary: "Roboto", sans-serif;
 $ff-secondary: "Open Sans", sans-serif;
-
-$navbar-background: $primary-color;
-$navbar-links-color: rgb(50, 50, 50);
-
-$footer-background: #222;
 
 @mixin underline($width, $height, $background, $position) {
   width: $width;
