@@ -73,10 +73,10 @@
   overflow: hidden;
   transition: all 1s;
 
-  .container {
+  .responsive-container {
     display: grid;
     grid-template-rows: repeat(5, 1fr);
-    background-color: $navbar-background;
+    background-color: white;
     padding-bottom: 10px;
 
     .responsive-link {

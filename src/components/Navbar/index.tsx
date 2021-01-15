@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
       <div className="responsive-menu" ref={linksContainerRef}>
         <div
           ref={linksRef}
-          className="container"
+          className="responsive-container"
           children={mapMenu("responsive-link")}
         />
       </div>
