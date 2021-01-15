@@ -46,6 +46,7 @@
           border-radius: 2em;
           display: flex;
           flex-direction: column;
+          flex-wrap: wrap;
 
           h3 {
             flex: 0.5;
@@ -70,6 +71,26 @@
               font-weight: bold;
               color: $secondary-color;
             }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container {
+    .projects-page {
+      .projects {
+        .projects-container {
+          display: flex;
+          flex-wrap: wrap;
+          max-width: 60%;
+          margin: auto;
+
+          article {
+            margin-top: 15px;
+            margin-bottom: 15px;
           }
         }
       }
