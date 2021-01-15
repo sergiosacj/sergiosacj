@@ -19,12 +19,7 @@ $width-max-size: 700px;
     flex-direction: column;
 
     h1 {
-      flex: 1;
-      font-size: $titles-font-size;
-      text-transform: capitalize;
-      letter-spacing: 3px;
-      margin: auto;
-      margin-bottom: 3px;
+      @extend %h1-title;
     }
     .underline {
       @include underline(5em, 0.3em, $secondary-color, center);
@@ -32,7 +27,6 @@ $width-max-size: 700px;
       margin-bottom: 4em;
     }
     .description {
-      flex: 1;
       font-size: 1em;
       font-family: $ff-secondary;
       text-align: justify;
@@ -44,7 +38,6 @@ $width-max-size: 700px;
     }
 
     .knowledge {
-      flex: 1;
       padding: 20px;
       display: inline-flex;
       flex-wrap: wrap;
