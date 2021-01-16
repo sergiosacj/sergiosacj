@@ -110,13 +110,31 @@ $button-text-color: #617d98;
         .projects-container {
           display: flex;
           flex-wrap: wrap;
-          max-width: 60%;
+          max-width: 70%;
           margin: auto;
 
           article {
             margin-top: 15px;
             margin-bottom: 15px;
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .container {
+    .projects-page {
+      h1 {
+        font-size: 2.5em;
+      }
+      .underline {
+        margin-bottom: 1.5em;
+      }
+      .projects {
+        .projects-container {
+          max-width: 90%;
         }
       }
     }
