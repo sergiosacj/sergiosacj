@@ -18,7 +18,6 @@ $button-text-color: #617d98;
 
     h1 {
       @extend %h1-title;
-      font-size: 4em;
     }
     .underline {
       @include underline(5em, 0.3em, $secondary-color, center);
