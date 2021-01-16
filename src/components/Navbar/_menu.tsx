@@ -1,7 +1,1 @@
-export const menu = [
-  "home",
-  "about",
-  "projects",
-  "blog",
-  "contact",
-];
+export const menu = ["home", "about", "projects", "blog"];
