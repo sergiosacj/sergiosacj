@@ -27,7 +27,11 @@ const Projects: React.FC = () => {
                     })}
                   </ul>
                   <div className="links">
-                    <a href={source} target="_blank">
+                    <a
+                      href={source}
+                      rel="noreferrer"
+                      target="_blank"
+                    >
                       source code
                     </a>
                   </div>
