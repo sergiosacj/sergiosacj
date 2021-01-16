@@ -21,6 +21,8 @@ $hero-top-margin: 12em;
       height: 100%;
       margin-left: 4em;
       margin-top: 7em;
+      display: flex;
+      flex-direction: column;
 
       .underline {
         @include underline(5em, 0.3em, $secondary-color, center);
@@ -39,6 +41,8 @@ $hero-top-margin: 12em;
       }
 
       .contact-me {
+        max-width: 91px;
+        font-size: 12px;
         margin-top: 1.25em;
         padding: 10px;
         font-weight: 700;
@@ -51,10 +55,8 @@ $hero-top-margin: 12em;
         transition: all 0.3s linear;
         cursor: pointer;
 
-        .link {
-          color: $button-letter-color;
-          text-decoration: none;
-        }
+        color: $button-letter-color;
+        text-decoration: none;
 
         &:hover {
           background-color: $secondary-color-light;

@@ -14,11 +14,14 @@ const Hero: React.FC = () => {
             Software Engineer & Free and Open Software
             Contributor
           </h4>
-          <button className="contact-me">
-            <Link to="/contact" className="link">
-              contact me
-            </Link>
-          </button>
+          <Link
+            to="/resume.pdf"
+            target="_blank"
+            download
+            className="contact-me"
+          >
+            my resume
+          </Link>
         </article>
         <article className="hero-img">
           <img src={me} alt="myself" className="hero-photo" />
