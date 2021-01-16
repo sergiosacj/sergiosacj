@@ -27,7 +27,9 @@ const Projects: React.FC = () => {
                     })}
                   </ul>
                   <div className="links">
-                    <a href={source}>source code</a>
+                    <a href={source} target="_blank">
+                      source code
+                    </a>
                   </div>
                 </article>
               );

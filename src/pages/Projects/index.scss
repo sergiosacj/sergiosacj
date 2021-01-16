@@ -1,6 +1,10 @@
 @import "../../partials/body";
 @import "../../partials/titles";
 
+$description-color: #617d98;
+$button-background-color: #dae2ec;
+$button-text-color: #617d98;
+
 .container {
   width: 100%;
   height: 100%;
@@ -15,7 +19,6 @@
     h1 {
       @extend %h1-title;
       font-size: 4em;
-      flex: 1;
     }
     .underline {
       @include underline(5em, 0.3em, $secondary-color, center);
@@ -25,7 +28,7 @@
     .projects {
       background-color: white;
       margin-top: 3em;
-      height: 100%;
+      min-height: 60vh;
 
       .projects-container {
         max-width: 1000px;
@@ -49,7 +52,7 @@
           flex-wrap: wrap;
 
           h3 {
-            flex: 0.5;
+            flex: 1;
             text-align: center;
             letter-spacing: 1.5px;
           }
@@ -58,6 +61,28 @@
             text-align: justify;
             color: #617d98;
             padding: 20px;
+            margin: 0;
+          }
+          ul {
+            padding: 20px;
+            margin: 0;
+            display: inline-flex;
+            flex-wrap: wrap;
+
+            li {
+              width: fit-content;
+              background-color: $button-background-color;
+              color: $button-text-color;
+              margin: 0.5rem;
+              letter-spacing: 2px;
+              text-decoration: none;
+              text-transform: uppercase;
+              padding: 0.25rem 0.5rem;
+              border-radius: 10%;
+              font-size: 0.7em;
+              text-decoration: none;
+              list-style-type: none;
+            }
           }
           .links {
             height: 40px;
